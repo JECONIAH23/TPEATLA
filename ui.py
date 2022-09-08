@@ -7,11 +7,11 @@ window.geometry("400x400")
 window.title("Login")
 window.config(bg="#f07167")
 
-lbl1=Label(window,text="Login",font=("",40),fg="#fed9b7",bg="#f07167")
+lbl1=Label(window,text="Login",font=("Courier",30),fg="#fed9b7",bg="#f07167")
 lbl1.pack(anchor="center")
 
 
-lbl2=Label(window,text="Email:",font=("",30),fg="#fdfcdc",bg="#f07167")
+lbl2=Label(window,text="Email:",font=("Georgia",20),fg="#fdfcdc",bg="#f07167")
 lbl2.place(x=10,y=90)
 
 ent1=Entry(window)
@@ -19,15 +19,15 @@ ent1.place(x=200,y=100)
 
 
 
-lbl3=Label(window,text="Password:",font=("",30),fg="#fdfcdc",bg="#f07167")
+lbl3=Label(window,text="Password:",font=("Georgia",20),fg="#fdfcdc",bg="#f07167")
 lbl3.place(x=10,y=170)
 
 ent3=Entry(window)
 ent3.place(x=200,y=180)
 
 
-btn1=Button(window,text="Apply",font=("",25),bg="#f07167")
-btn1.place(x=150,y=300)
+loginbtn=Button(window,text="Login",font=("",15),bg="#f07167")
+loginbtn.place(x=150,y=300)
 window.mainloop()
 
 #########
