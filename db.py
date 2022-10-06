@@ -100,7 +100,7 @@ def addincident(data,tbl='tbl'):
                 print(query)
                 print(type(query))
                 cursor = connection.cursor()
-                cursor.execute('query')
+                cursor.execute(query)
                 connection.commit()
                 print(cursor.rowcount, "Record inserted successfully into {}")
                 ff = "{}\tRecord inserted successfully into {}".format(str(datetime.now()))
@@ -151,7 +151,7 @@ def add_user(data=[NULL,'username','email', 'password', 'contact'],tbl='users'):
                 print(query)
                 print(type(query))
                 cursor = connection.cursor()
-                cursor.execute('query')
+                cursor.execute(query)
                 connection.commit()
                 print(cursor.rowcount, "Record inserted successfully into {}".format(tbl))
                 ff = "{}\tRecord inserted successfully into {}".format(str(datetime.now()),tbl)
@@ -225,13 +225,13 @@ def get_users(tbl='users'):
             cursor.execute(f"select database();")
             record = cursor.fetchone()
             print(record)
-            query = "select * FROM {};".format(tbl)
+            query = 'select * FROM {};'.format(tbl)
             # Execute query
             if query:
                 print(query)
                 print(type(query))
                 cursor = connection.cursor()
-                cursor.execute('query')
+                cursor.execute(query)
                 # connection.commit()
                 info = cursor.fetchall()
                 print(cursor.rowcount, "Record fetsched successfully from {} table".format(tbl))
@@ -272,12 +272,13 @@ def get_incidents(tbl='incidents'):
             record = cursor.fetchone()
             print(record)
             query = "select * FROM {};".format(tbl)
+
             # Execute query
             if query:
                 print(query)
                 print(type(query))
                 cursor = connection.cursor()
-                cursor.execute('query')
+                cursor.execute(query)
                 # connection.commit()
                 info = cursor.fetchall()
                 print(cursor.rowcount, "Record fetsched successfully from {} table".format(tbl))
@@ -322,5 +323,5 @@ def get_incidents(tbl='incidents'):
 
 
 # addincident([9,'testing',89,45],'tbl')
-# add_user(['ject','ject@ject.com','ject1234','0774057306'],)
-get_incidents()
+add_user(['samuel','samuel@ject.com','samuel1234','0774057306'],)
+get_users()

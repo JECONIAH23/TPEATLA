@@ -7,3 +7,10 @@
 2022-10-06 09:12:45.083287	Failed to execute query on  MySQL table 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'query' at line 
 2022-10-06 09:13:07.874363	Failed to execute query on  MySQL table 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'query' at line 
 2022-10-06 09:13:23.545025	Failed to execute query on  MySQL table 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'query' at line 
+2022-10-06 09:15:08.814649	Failed to execute query on  MySQL table 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'query' at line 
+2022-10-06 09:18:53.760668	Failed to execute query on  MySQL table 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'query' at line 
+2022-10-06 09:27:44.099430	Failed to execute query on  MySQL table 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'query' at line 
+2022-10-06 09:28:51.428237	Failed to execute query on  MySQL table 1146 (42S02): Table 'adb.incidents' doesn't exist
+2022-10-06 09:29:40.853831	Records inserted successfully from users
+2022-10-06 09:30:58.370263	Record inserted successfully into users
+2022-10-06 09:30:58.398245	Records inserted successfully from users
