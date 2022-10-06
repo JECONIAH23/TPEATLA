@@ -1,22 +1,31 @@
 from turtle import title
 from flask import Blueprint, request, render_template, redirect, url_for, request
 
-post_pages = Blueprint("posts", __name__)
+dashboard_pages = Blueprint("dashboard", __name__)
 
 # @post_pages.get("/post/<string:title>")
 # def displa_post(title:str):
 #     return "Display post page."
 
-@post_pages.route("/post/",methods = ["GET","POST"])
+@dashboard_pages.route("/index/",methods = ["GET","POST"])
 def create_post():
     if request.method == "POST":
         title = request.form.get("title")
         content = request.form.get("content")
-        # Adding post to database here
+        # Adding index to database here
         return redirect(url_for(".display_post",title=title))
     return render_template("index.html")
 
-@post_pages.get("/post/<string:title>")
+@dashboard_pages.route("/",methods = ["GET","POST"])
+def create_post():
+    if request.method == "POST":
+        title = request.form.get("title")
+        content = request.form.get("content")
+        # Adding index to database here
+        return redirect(url_for(".display_post",title=title))
+    return render_template("index.html")
+
+@dashboard_pages.get("/index/<string:title>")
 def display_post(title):
     content = "..." # How do we get the content?
     return render_template("index.html", title=title, content=content)
