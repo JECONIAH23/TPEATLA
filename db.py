@@ -1,6 +1,7 @@
 import mysql.connector
 from mysql.connector import Error
 from os import system as sys
+from datetime import datetime
 
 def login():
     # Login sql
@@ -94,7 +95,9 @@ def addincident(data,tbl='tbl'):
                 cursor.execute('query')
                 connection.commit()
                 print(cursor.rowcount, "Record inserted successfully into Laptop table")
-                
+                ff = "{}\tRecord inserted successfully into Laptop table".format(str(datetime.now()))
+                cmd = f"echo {ff}>>db_logs.txt"
+                sys(cmd)
                 result = cursor.fetchone()
             print(record)
 
@@ -103,7 +106,7 @@ def addincident(data,tbl='tbl'):
         
     except mysql.connector.Error as error:
         print("Failed to insert into MySQL table {}".format(error))
-        ff = "Failed to insert into MySQL table {}".format(error)
+        ff = "{}\tFailed to insert into MySQL table {}".format(str(datetime.now()),error)
         cmd = f"echo {ff}>>db_logs.txt"
         sys(cmd)
     finally:   
