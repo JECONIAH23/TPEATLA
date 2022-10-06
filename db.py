@@ -1,5 +1,6 @@
 import mysql.connector
 from mysql.connector import Error
+from os import system as sys
 
 def login():
     # Login sql
@@ -31,12 +32,6 @@ def getincidents():
 def getculprits():
     return 87
 #QUERIES OF RECORDS
-
-
-
-
-
-
 
 ################################
 # add info queries
@@ -108,6 +103,9 @@ def addincident(data,tbl='tbl'):
         
     except mysql.connector.Error as error:
         print("Failed to insert into MySQL table {}".format(error))
+        ff = "Failed to insert into MySQL table {}".format(error)
+        cmd = f"echo {ff}>>db_logs.txt"
+        sys(cmd)
     finally:   
         if connection.is_connected():
             cursor.close()
